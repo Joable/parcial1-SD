@@ -1,0 +1,20 @@
+addi s0, zero, 2
+addi a0, zero, 3
+jal ra, hanoi
+fin: beq zero, zero, fin
+hanoi: addi sp, sp, -8
+    sw a0, 4(sp)
+    sw ra, 0(sp)
+    addi a0, a0, -1
+    bgt a0, zero, recursivo
+    addi a0, a0, 1
+    addi sp, sp, 8
+    jr ra
+recursivo: jal ra, hanoi
+    lw t1, 4(sp)
+    lw ra, 0(sp)
+    addi sp, sp, 8
+    mul t1, t1, s0
+    addi t1, t1, 1
+    jr ra
+    

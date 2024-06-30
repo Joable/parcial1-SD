@@ -1,0 +1,22 @@
+.data
+    mascara: .word 0xFF 0x00 0x00 0x00
+.text
+    lw s1, mascara
+    addi s2, zero, 32
+    jal ra, comenzar
+fin: beq zero, zero , fin
+comenzar:
+    add a0, zero, s0
+    addi t1, zero, 0
+    addi t2, zero, 0
+while:
+    beq t2, s2, return
+    and t0, a0, s1
+    add t1, t1, t0
+    srli a0, a0, 8
+    addi t2, t2, 8
+    j while 
+return:
+    add a0, zero, t1
+    ret
+#Le pase la instruccion que copia t1 en a0 a return  

@@ -1,0 +1,2 @@
+1-Hacer una funcion que meta al programa en un loop infinito, asi lo deja parado cuando termino de todas las instrucciones.
+2-Usar la convencion de valores por parametro para las funciones del programa.

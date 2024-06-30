@@ -1,0 +1,41 @@
+-funcion hanoi recibe 1 argumento.
+-al argumento se le resta 1.
+-si el resultado de la operacion es 0, entonces la funcion retornara 1.
+-si el resultado de la operacion es mayor a uno, se multiplicara 2 por el valor retornado de la funcion hanoi con el resultado anterior como parametro, y luego a todo eso se le suma uno.
+
+-----------------------------------------------------------------------------------------------
+
+-guardar los valores de la funcion llamadora.
+-restar 1 al argumento.
+-comparar el resultado con cero.
+-si es igual a cero:
+	-retornar 1
+-si es mayor a cero:
+	-llamar a hanoi con el resultado como parametro.
+	-multiplicar el valor retornado por 2.
+	-sumarle 1.
+	-retornar ese valor.
+
+-----------------------------------------------------------------------------------------------
+
+ahora escribilo pero con mas detalles sobre como manejar los estados del programa(el sp y eso).
+-etiqueta de funcion de hanoi.
+-restar 8 al sp.
+-guardar a0 en 4(sp)
+-guardar ra en 0(sp)
+-restar 1 a a0.
+-comparar a0 con cero.
+-si es igual a cero:
+	-sumar 1 a a0.
+	-sumar 8 a sp.
+	-volver a ra.
+-si es mayor a cero:
+	-saltar a la funcion hanoi.
+	-cargar 4(sp) en t1.
+	-cargar 0(sp) en ra.
+	-sumar 8 al sp.
+	-multiplicar t1 por 2.
+	-sumar 1 a t1.
+	-volver a ra.
+	
+	
