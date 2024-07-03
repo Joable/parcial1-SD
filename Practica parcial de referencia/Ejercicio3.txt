@@ -1,6 +1,6 @@
 .text:
     la s0, mediciones
-    lw s1, largo
+    lb s1, largo
     li s2, 0x0F00
     li s3, 0xFFFF
     add a0, zero, s0
